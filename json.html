@@ -1,0 +1,233 @@
+Resume using JSON
+
+# Contact Information
+
+{
+  "name": "Abhirami",
+  "email": "Abhirami@email.com",
+  "phone": "123-456-7890",
+  "linkedin": "(link unavailable)",
+  "address": "123 Main St, chamarajnagar, karnataka"
+}
+
+
+# Summary
+
+{
+  "summary": "Highly motivated and experienced professional with 2+ years in software development."
+}
+
+
+# Education
+
+{
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "Mysore University",
+      "date": "2010-2014"
+    }
+  ]
+}
+
+
+# Work Experience
+
+{
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "ABC Corporation",
+      "date": "2018-Present",
+      "responsibilities": [
+        "Led development teams",
+        "Designed and implemented software solutions",
+        "Collaborated with cross-functional teams"
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "DEF Startups",
+      "date": "2015-2018",
+      "responsibilities": [
+        "Developed and deployed software applications",
+        "Participated in code reviews",
+        "Worked with agile development methodologies"
+      ]
+    }
+  ]
+}
+
+
+# Skills
+
+{
+  "skills": [
+    {
+      "category": "Programming Languages",
+      "list": ["Java", "Python", "JavaScript"]
+    },
+    {
+      "category": "Technologies",
+      "list": ["AWS", "Docker", "Kubernetes"]
+    }
+  ]
+}
+
+
+# Projects
+
+{
+  "projects": [
+    {
+      "title": "Personal Website",
+      "description": "Built using HTML, CSS, and JavaScript",
+    },
+    {
+      "title": "Open-Source Contribution",
+      "description": "Contributed to popular GitHub repository",
+    }
+  ]
+}
+
+
+# Certifications
+
+{
+  "certifications": [
+    {
+      "name": "Certified Scrum Master",
+      "issuer": "Scrum Alliance",
+      "date": "2020"
+    }
+  ]
+}
+
+
+# References
+
+{
+  "references": [
+    {
+      "name": "Jane Smith",
+      "title": "Manager",
+      "company": "ABC Corporation",
+      "phone": "123-456-7890"
+    }
+  ]
+}
+
+Above JSON iterate  over all for loops like for, for in,for of, for ecah.
+
+# For Loop
+
+const resume = {
+  "contact": {...},
+  "summary": "...",
+  "education": [...],
+  "experience": [...],
+  "skills": [...],
+  "projects": [...],
+  "certifications": [...]
+};
+
+for (let i = 0; i < Object.keys(resume).length; i++) {
+  const key = Object.keys(resume)[i];
+  console.log(Key: ${key}, Value: ${JSON.stringify(resume[key])});
+}
+
+
+# For...In Loop
+
+for (const key in resume) {
+  console.log(Key: ${key}, Value: ${JSON.stringify(resume[key])});
+}
+
+
+# For...Of Loop
+
+const keys = Object.keys(resume);
+for (const key of keys) {
+  console.log(Key: ${key}, Value: ${JSON.stringify(resume[key])});
+}
+
+
+# ForEach Loop
+
+Object.keys(resume).forEach(key => {
+  console.log(Key: ${key}, Value: ${JSON.stringify(resume[key])});
+});
+
+Read about the diffrence between windows ,Screen & Document in javascript
+
+Window Object
+
+- The window object represents the browser window or frame.
+- It's the global object in JavaScript, and all other objects, functions, and variables are its properties.
+- Properties:
+    - window.location: The current URL.
+    - window.history: The browser's history.
+    - window.navigator: Information about the browser.
+    - window.screen: The user's screen.
+- Methods:
+    - window.alert(): Displays an alert box.
+    - window.confirm(): Displays a confirmation box.
+    - window.prompt(): Displays a prompt box.
+    - window.open(): Opens a new window or tab.
+    - window.close(): Closes the current window.
+
+Screen Object
+
+- The screen object represents the user's screen.
+- It's a property of the window object.
+- Properties:
+    - screen.width and screen.height: The screen's resolution.
+    - screen.availWidth and screen.availHeight: The available screen space.
+    - screen.colorDepth: The screen's color depth.
+    - screen.orientation: The screen's orientation.
+    - Methods: None
+    
+    Document Object
+    
+    - The document object represents the HTML document.
+    - It's a property of the window object.
+    - Properties:
+        - document.title: The document's title.
+        - document.URL: The document's URL.
+        - document.referrer: The referrer URL.
+        - document.body: The HTML body element.
+        - document.head: The HTML head element.
+    - Methods:
+        - document.querySelector(): Selects an element.
+        - document.createElement(): Creates a new element.
+        - document.addEventListener(): Attaches an event listener.
+        - document.write(): Writes HTML content.
+    
+    Key Differences
+    
+    - Scope: window is the global scope, while document is a property of window.
+    - Purpose: window handles browser-related tasks, document handles HTML document-related tasks, and screen 
+    provides screen-related information.
+    - Accessibility: window and document are accessible globally, while screen is accessible via window.screen.
+    
+    Example Use Cases
+    
+    Window
+    
+    
+    window.addEventListener('load', function() {
+      console.log('Window loaded');
+    });
+    
+    
+    Screen
+    
+    
+    console.log('Screen resolution:', screen.width, 'x', screen.height);
+    
+    
+    Document
+    
+    
+    const heading = document.querySelector('h1');
+    console.log('Heading text:', heading.textContent);
